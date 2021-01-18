@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loading__circle {
+        border-radius: 50%;
+        box-sizing: border-box;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--purple {
+            background-image: linear-gradient(to top, #fff 70%, transparent 70%);
+        }
+
+        &--blue {
+            background-image: linear-gradient(to top, #0558E1 70%, transparent 70%);
+        }
+    }
+
+    .loading__blankspace {
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 5px solid transparent;
+        background-color: #222;
+    }
+
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    transform: rotate(20deg);
+    animation: balance1 3s ease-in-out infinite;
+    animation-delay: .3s;
+}
+
+.blankspace1 {
+    width: 192px;
+    height: 192px;
+}
+
+.circle2 {
+    width: 160px;
+    height: 160px;
+    transform: rotate(10deg);
+    animation: balance2 3s ease-in-out infinite;
+    animation-delay: .2s;
+}
+
+.blankspace2 {
+    width: 152px;
+    height: 162px;
+}
+
+.circle3 {
+    width: 120px;
+    height: 120px;
+    transform: rotate(40deg);
+    animation: balance3 3s ease-in-out infinite;
+    animation-delay: .1s;
+}
+
+.blankspace3 {
+    width: 112px;
+    height: 112px;
+}
+
+.circle4 {
+    width: 80px;
+    height: 80px;
+    transform: rotate(10deg);
+    animation: balance4 3s ease-in-out infinite;
+}
+
+.blankspace4 {
+    width: 72px;
+    height: 87px;
+}
+
+@keyframes balance1 {
+    0% {
+        transform: rotate(-50deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes balance2 {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(340deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes balance3 {
+    0% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(350deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+}
+
+@keyframes balance4 {
+    0% {
+        transform: rotate(-70deg);
+    }
+    50% {
+        transform: rotate(380deg);
+    }
+    100% {
+        transform: rotate(-70deg);
+    }
+}
